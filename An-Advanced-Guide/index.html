@@ -4,11 +4,10 @@
     <meta charset="utf-8">
     <title>An Advanced Guide to Pure CSS Images</title>
     <link rel="stylesheet" href="style.css" type="text/css" />
-    <script type="text/javascript" src="https://unpkg.com/vue/dist/vue.js"></script>
   </head>
   <body>
     
-    <div v:if="showDesk" id="desk">    
+    <div v-if="showDesk" id="desk">    
       <div class="box">
       
         <div id="sticky-notes">
@@ -17,7 +16,7 @@
               <div class="sticky-text"></div>
               <div class="bottom-strip-1"></div>
           </div>
-          <div class="sticky-note-2">
+          <div @click="processSticky(2)" class="sticky-note-2">
               <div class="sticky-text"></div>
               <div class="bottom-strip-2"></div>
           </div>
@@ -105,8 +104,25 @@
       
       </div> <!-- end box -->
     </div> <!-- end #desk -->
-
     
+    <div v-if="showStickyYellow" id="stickyYellow">
+      <div class="box">
+        <div id="grains">
+          <div class="grain-1"></div>
+          <div class="grain-2"></div>
+          <div class="grain-3"></div>
+          <div class="grain-4"></div>
+          <div class="grain-5"></div>
+          <div class="grain-6"></div>
+        </div>
+        <div class="sticky-note-large-yellow">
+          <input @keyup.enter="processText" v-model="stickyText" type="text"/>
+        </div>
+      </div>
+    </div>
+    
+    
+    <script type="text/javascript" src="https://unpkg.com/vue/dist/vue.js"></script>
     <script type="text/javascript" src="script.js"></script>    
   </body>
 </html>
