@@ -12,12 +12,12 @@
       
         <div id="sticky-notes">
         
-          <div class="sticky-note-1">
-              <div class="sticky-text"></div>
+          <div @click="processSticky(1)" class="sticky-note-1">
+              <div class="sticky-text">{{ stickyTextRed }}</div>
               <div class="bottom-strip-1"></div>
           </div>
           <div @click="processSticky(2)" class="sticky-note-2">
-              <div class="sticky-text"></div>
+              <div class="sticky-text">{{ stickyTextYellow }}</div>
               <div class="bottom-strip-2"></div>
           </div>
         </div><!-- end sticky-notes -->
@@ -119,7 +119,24 @@
           <input @keyup.enter="processText" v-model="stickyText" type="text"/>
         </div>
       </div>
-    </div>
+    </div> <!-- end StickyYellow -->
+    
+    <div v-if="showStickyRed" id="stickyRed">
+      <div class="box">
+        <div id="grains">
+          <div class="grain-1"></div>
+          <div class="grain-2"></div>
+          <div class="grain-3"></div>
+          <div class="grain-4"></div>
+          <div class="grain-5"></div>
+          <div class="grain-6"></div>
+        </div>
+        <div class="sticky-note-large-red">
+          <input @keyup.enter="processText" v-model="stickyText" type="text"/>
+        </div>
+      </div>
+    </div> <!-- end stickyRed -->
+    
     
     
     <script type="text/javascript" src="https://unpkg.com/vue/dist/vue.js"></script>
