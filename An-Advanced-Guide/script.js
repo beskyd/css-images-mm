@@ -15,6 +15,10 @@ var desk = new Vue({
         this.showDesk = false;
         stickyYellow.showStickyYellow = true
       }
+    },
+    processGameboy: function() {
+      this.showDesk = false;
+      gameboy.showGameboy = true;
     }
   }
 });
@@ -52,13 +56,20 @@ var stickyRed = new Vue({
 });
 
 
-var Gameboy = new Vue({
+var gameboy = new Vue({
   el: "#gameboy",
   data: {
     showGameboy: false,
+    on: false,
     screenLogo: "http://lparchive.org/Pokemon-Blue/Update%2001/1-capture_02042010_120644.png"
   },
   methods: {
-    
+    startGameboy: function() {
+      this.on = true;
+    },
+    backToDesk: function() {
+      this.showGameboy = false;
+      desk.showDesk = true;
+    }
   }
 });
