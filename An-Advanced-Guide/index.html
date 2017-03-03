@@ -138,6 +138,38 @@
     </div> <!-- end stickyRed -->
     
     
+    <div v-if="showGameboy" id="gameboy">
+      <div class="box">
+        <div id="grains">
+          <div class="grain-1"></div>
+          <div class="grain-2"></div>
+          <div class="grain-3"></div>
+          <div class="grain-4"></div>
+          <div class="grain-5"></div>
+          <div class="grain-6"></div>
+        </div>
+        <div class="gameboy-large">
+          <div class="gameboy-screen-back">
+            <div class="gameboy-dot"></div>
+            <div class="gameboy-screen-front">
+              <div class="game-container">
+              <img class="screen-logo" :src="screenLogo" />
+            </div>
+            </div>
+          </div>
+          <div class="dpad-container">
+            <div class="horizontal-dpad"></div>
+            <div class="vertical-dpad"></div>
+          </div>
+          <div class="button-1"></div>
+          <div class="button-2"></div>
+          <div class="start"></div>
+          <div class="select"></div>
+        </div>
+      </div>
+    </div> <!-- end #gameboy -->
+    
+    
     
     <script type="text/javascript" src="https://unpkg.com/vue/dist/vue.js"></script>
     <script type="text/javascript" src="script.js"></script>    

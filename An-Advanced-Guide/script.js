@@ -50,3 +50,15 @@ var stickyRed = new Vue({
     }
   }
 });
+
+
+var Gameboy = new Vue({
+  el: "#gameboy",
+  data: {
+    showGameboy: false,
+    screenLogo: "http://lparchive.org/Pokemon-Blue/Update%2001/1-capture_02042010_120644.png"
+  },
+  methods: {
+    
+  }
+});
